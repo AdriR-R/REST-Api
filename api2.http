@@ -1,0 +1,26 @@
+### Obtener el recurso movies
+GET http://localhost:3500/movies
+### recuperar movie por id
+GET http://localhost:3500/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+### recuperar todas las peliculas por un genero
+GET http://localhost:3500/movies?genre=action&rate=8.5
+###Crear una pelicula con post
+POST http://localhost:3500/movies
+Content-Type: application/json
+
+{
+  "title": "The Lord of the Rings: The Return of the King",
+  "year": 2003,
+  "director": "Peter Jackson",
+  "duration": 201,
+  "poster": "https://m.media-amazon.com/images/I/71X6YzwV0gL._AC_SL1024_.jpg",
+  "genre": ["Adventure", "Fantasy", "Action"],
+  "any": 404
+}
+###actualizar Pelicula
+PATCH http://localhost:3500/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+Content-Type: application/json
+
+{
+  "duration": 145
+}
